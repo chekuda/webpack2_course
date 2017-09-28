@@ -5,8 +5,9 @@ const config = {
       {
         test: /\.css/,
         use: [
-          { loader: 'style-loader' },
-          { loader:'css-loader' }
+          'style-loader',
+          { loader:'css-loader', options: { parser: 'sugars' } },
+          'postcss-loader'
         ]
       }
     ]

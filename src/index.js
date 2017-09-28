@@ -1,6 +1,6 @@
 import createAppendCard from './card'
 import './icon.png'
-import './index.css'
+import styles from './index.css'
 
 createAppendCard(
   'Learning Webpack configuration!',

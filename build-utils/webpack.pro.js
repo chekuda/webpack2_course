@@ -10,7 +10,12 @@ const config = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          use: 'css-loader',
+          use: [
+            {
+              loader: 'css-loader'
+            },
+            'postcss-loader'
+          ],
           fallback: 'style-loader'
         })
       }
