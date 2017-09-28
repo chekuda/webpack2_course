@@ -4,7 +4,7 @@ const createAppendCard = (header, body) => {
   const cardHeader = `<h2 class="card-header">${header}</h2>`
   const cardBody = `<div class="card-body">${body}</div>`
 
-  cardElement.innerHTML = `<div class="card">${cardHeaer}${cardBody}</div>`
+  cardElement.innerHTML = `<div class="card">${cardHeader}${cardBody}</div>`
 
   cardFragment.appendChild(cardElement)
 
