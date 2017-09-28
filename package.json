@@ -1,19 +1,46 @@
 {
   "name": "webpack2_course",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "repository": "git@github.com:chekuda/webpack2_course.git",
+  "author": "Jose Luis Checa Exposito <joselchecaexpo@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:watch:pro": "npm run build:watch -- --env.env=pro",
-    "build:watch": "npm run build -- --watch",
-    "build": "webpack"
+    "build:watch:dev": "yarn build:watch --env.env=dev",
+    "build:watch:pro": "yarn build:watch --env.env=pro",
+    "build:watch": "yarn build --watch",
+    "build:dev:bundlebuddy": "yarn build:dev --env.addons=bundlebuddy",
+    "build:dev:bundleanalyze": "yarn build:dev --env.addons=bundleanalyze",
+    "build:dev": "yarn build --env.env=dev",
+    "debug:debug:dev": "yarn build:debug --env.env=dev",
+    "build:pro:bundlebuddy": "yarn build:pro --env.addons=bundlebuddy",
+    "build:pro:bundleanalyze": "yarn build:pro --env.addons=bundleanalyze",
+    "build:pro": "yarn build --env.env=pro",
+    "build:pro:firstPlugin": "yarn build:pro --env.addons=firstPlugin",
+    "build:pro:alladdons": "yarn build:pro --env.addons=bundlebuddy --env.addons=bundleanalyze",
+    "build:debug:pro": "yarn build:debug --env.env=pro",
+    "build:debug": "node --inspect --debug-brk ./node_modules/webpack/bin/webpack.js",
+    "build": "yarn server",
+    "server": "webpack-dev-server",
+    "webpack-defaults": "webpack-defaults"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
+    "compression-webpack-plugin": "^1.0.0",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.7.2",
+    "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.0",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "bundle-buddy-webpack-plugin": "^0.3.0",
+    "html-webpack-plugin": "^2.30.1",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
+    "webpack-bundle-analyzer": "^2.9.0"
   }
 }
