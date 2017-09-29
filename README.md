@@ -11,9 +11,10 @@
   - Run dev environment (with server: virtual files)
     - yarn build:dev
     - yarn build:dev:watch
-  - Run prod environment (with ugifly output)
+  - Run prod environment (with ugifly output to create files)
     - yarn build:pro
     - yarn build:pro:watch
+  - Run pro server
     - yarn start-pro
 
 ## Webpack configuration
