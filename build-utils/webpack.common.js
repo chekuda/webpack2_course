@@ -2,13 +2,15 @@ const commonPaths = require('./webpack.common-paths')
 const webpack = require('webpack')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 
+console.log(commonPaths.assetsPath)
+
 //Common configuration
 const config = {
-  entry: "./src/", //this will take all files in the folder but as a entry point index.js by default
+  entry: './src/', //this will take all files in the folder but as a entry point index.js by default
   //output file
   output: {
     //Outpuf file name
-    filename: "bundle.js",//create new bundle everytime
+    filename: 'bundle.js',//create new bundle everytime
     //Path where the output file will be saved
     path: commonPaths.outputPath
   },
@@ -18,7 +20,7 @@ const config = {
         test: /\.png/, //extension of files to be affected by this rule
         use: [
           {
-            loader:'url-loader', //will conver any assets requested by js or css into B64 string
+            loader:'url-loader', //will conver any assets requested by js or css into B64 string and inject themn in the bundle
             options:{
               limit: 30000 //limit of the image
             }
