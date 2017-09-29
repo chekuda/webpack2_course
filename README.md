@@ -8,10 +8,13 @@
 
 ## Run commands
 
-  - Run webpack in terminal
-    `webpack`
-  - Run webpack and keep watching changes
-    `webpack --watch`
+  - Run dev environment (with server: virtual files)
+    - yarn build:dev
+    - yarn build:dev:watch
+  - Run prod environment (with ugifly output)
+    - yarn build:pro
+    - yarn build:pro:watch
+    - yarn start-pro
 
 ## Webpack configuration
 
@@ -74,3 +77,24 @@
     This does a `hot module replacement` by default. How to inject the css modules requested
   - `eslint`
     I can add it to a rules if I load the package `eslint and eslint-loader` and create the config file `.eslintrc.json`
+
+## Use React
+
+  First I have to add react to my project `yarn add react` and also `yarn add babel-preset-react` for jsx files
+
+  - Need to add the template to my output html file using `htmlWebpackPlugin`. When I create the instance I have to pass the template, the name of the output file and the part I want to inject from the template
+
+  - Add react plugin to eslint in order not get errors with the jsx files
+
+  - Add extension in `webpack.common.js` in order to dont have to write the extension for `js or jsx` files when imported
+
+  ### Serve files for dev environment
+
+  Im going to use `copy-webpack-plugin` for dev environments.
+  For this I will serve all the images in public folder into a virtual folder within my output dist
+
+     new CopyWebpackPlugin([
+        { from: './public/', to:'assets' }
+      ])
+    
+  

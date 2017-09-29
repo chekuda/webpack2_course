@@ -20,7 +20,7 @@ const config = {
       ]
     },
     plugins: [
-      new ExtractTextPlugin('style.css'), //Exrtact the css file with this name
+      new ExtractTextPlugin('[name].css'), //Exrtact the css file with this name
       new UglifyJsWebpackPlugin({
         sourceMap: true //dont strip the footer of the bundle
       }),
