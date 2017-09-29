@@ -1,8 +1,7 @@
-const commonPaths = require('./webpack.common-paths')
 const webpack = require('webpack')
+const commonPaths = require('./webpack.common-paths')
 const htmlWebpackPlugin = require('html-webpack-plugin')
-
-console.log(commonPaths.assetsPath)
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 //Common configuration
 const config = {
@@ -48,7 +47,12 @@ const config = {
       template: `${commonPaths.srcPath}/index.html`,
       filename: 'index.html',
       inject: 'body'
-    })
+    }),
+     //This will serve all the assets inside public folder
+    //into virtual assets folder within output /dist (dev environment)
+    new CopyWebpackPlugin([
+      { from: './public/', to:'assets' }
+    ])
   ],
   resolve: {
     extensions: ['.js', '.json', '.jsx'], //Add this in order to dont indicate the extension when import it

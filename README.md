@@ -85,12 +85,13 @@
 
   - Add extension in `webpack.common.js` in order to dont have to write the extension for `js or jsx` files when imported
 
-  ### Serve files for dev environments
+  ### Serve files for dev environment
 
   Im going to use `copy-webpack-plugin` for dev environments.
   For this I will serve all the images in public folder into a virtual folder within my output dist
 
-    ` new CopyWebpackPlugin([
+     new CopyWebpackPlugin([
         { from: './public/', to:'assets' }
       ])
-    `
+    
+  
