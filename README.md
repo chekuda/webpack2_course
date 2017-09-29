@@ -84,3 +84,13 @@
   - Add react plugin to eslint in order not get errors with the jsx files
 
   - Add extension in `webpack.common.js` in order to dont have to write the extension for `js or jsx` files when imported
+
+  ### Serve files for dev environments
+
+  Im going to use `copy-webpack-plugin` for dev environments.
+  For this I will serve all the images in public folder into a virtual folder within my output dist
+
+    ` new CopyWebpackPlugin([
+        { from: './public/', to:'assets' }
+      ])
+    `
