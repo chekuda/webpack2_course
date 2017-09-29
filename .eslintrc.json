@@ -3,6 +3,9 @@
     "browser": true,
     "es6": true
   },
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "comma-dangle": [2,"never"],
     "semi": [2,"never"],
@@ -10,6 +13,9 @@
     "arrow-body-style": [2, "as-needed"]
   },
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "sourceType": "module"
   }
 }

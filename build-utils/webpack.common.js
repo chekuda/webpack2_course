@@ -42,8 +42,15 @@ const config = {
     ]
   },
   plugins: [
-    new htmlWebpackPlugin()
-  ]
+    new htmlWebpackPlugin({
+      template: `${commonPaths.srcPath}/index.html`,
+      filename: 'index.html',
+      inject: 'body'
+    })
+  ],
+  resolve: {
+    extensions: ['.js', '.json', '.jsx'], //Add this in order to dont indicate the extension when import it
+  }
 }
 
 module.exports = config

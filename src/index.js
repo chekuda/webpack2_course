@@ -1,7 +1,5 @@
-import createAppendCard from './card'
-import './icon.png'
-import styles from './index.css'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './app'
 
-createAppendCard(
-  'Learning Webpack configuration!',
-  'Webpack basic ideas')
+ReactDOM.render(<App />, document.getElementById('root'))

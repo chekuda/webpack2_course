@@ -20,7 +20,7 @@
     "build:pro:alladdons": "yarn build:pro --env.addons=bundlebuddy --env.addons=bundleanalyze",
     "build:debug:pro": "yarn build:debug --env.env=pro",
     "build:debug": "node --inspect --debug-brk ./node_modules/webpack/bin/webpack.js",
-    "build": "webpack",
+    "build": "yarn server",
     "server": "webpack-dev-server",
     "webpack-defaults": "webpack-defaults"
   },
@@ -29,6 +29,7 @@
     "css-loader": "^0.28.7",
     "eslint": "^4.7.2",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "postcss-load-config": "^1.2.0",
@@ -49,6 +50,8 @@
     "bundle-buddy-webpack-plugin": "^0.3.0",
     "html-webpack-plugin": "^2.30.1",
     "postcss-loader": "^2.0.6",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
     "webpack-bundle-analyzer": "^2.9.0"
   }
