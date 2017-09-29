@@ -8,10 +8,13 @@
 
 ## Run commands
 
-  - Run webpack in terminal
-    `webpack`
-  - Run webpack and keep watching changes
-    `webpack --watch`
+  - Run dev environment (with server: virtual files)
+    - yarn build:dev
+    - yarn build:dev:watch
+  - Run prod environment (with ugifly output)
+    - yarn build:pro
+    - yarn build:pro:watch
+    - yarn start-pro
 
 ## Webpack configuration
 
